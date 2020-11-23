@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_discount_expanded"
+    android:alpha="0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_shop_name_b"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="93dp"
+        android:text="店铺名字店铺名字店铺名字店铺名字店铺名字店铺名字店铺名字店铺名字"
+        android:textColor="@color/commonTextColor"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_sell_b"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="月售3767 配送约30分钟"
+        android:textColor="#858687"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_shop_name_b"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name_b"
+        app:layout_constraintTop_toBottomOf="@+id/tv_shop_name_b" />
+
+    <TextView
+        android:id="@+id/tv_score_b"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="评分4.6 强烈推荐，xxxxxxx"
+        android:textColor="@color/commonTextColor"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_shop_name_b"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name_b"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sell_b" />
+
+    <TextView
+        android:id="@+id/tv_honor_b"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_shop_discount_honor_bg"
+        android:gravity="center"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="天河区炸鸡炸串人气第1名"
+        android:textColor="@color/commonTextColor"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name_b"
+        app:layout_constraintTop_toBottomOf="@+id/tv_score_b" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#f1f1f2"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name_b"
+        app:layout_constraintTop_toBottomOf="@+id/tv_honor_b" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="优惠"
+        android:textColor="@color/commonTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name_b"
+        app:layout_constraintTop_toBottomOf="@+id/view_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_discount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name_b"
+        app:layout_constraintTop_toBottomOf="@+id/view_line">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8.8dp"
+            android:text="满x减x、满x减x、满x减x、满x减x；每含1元津贴"
+            android:textColor="@color/commonTextColor"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8.8dp"
+            android:text="折扣商品五折起"
+            android:textColor="@color/commonTextColor"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8.8dp"
+            android:text="实际支付xx元返x元商家代金券"
+            android:textColor="@color/commonTextColor"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="满x减x、满x减x、满x减x、满x减x；每含1元津贴"
+            android:textColor="@color/commonTextColor"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="商家服务"
+        android:textColor="@color/commonTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name_b"
+        app:layout_constraintTop_toBottomOf="@+id/ll_discount" />
+
+    <TextView
+        android:id="@+id/tv_merchant_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:text="热情掌柜"
+        android:textColor="@color/commonTextColor"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name_b"
+        app:layout_constraintTop_toBottomOf="@+id/ll_discount" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="公告"
+        android:textColor="@color/commonTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name_b"
+        app:layout_constraintTop_toBottomOf="@+id/tv_merchant_service" />
+
+    <TextView
+        android:id="@+id/tv_announcement_b"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="16dp"
+        android:text="公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告"
+        android:textColor="@color/commonTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name_b"
+        app:layout_constraintTop_toBottomOf="@+id/tv_merchant_service" />
+</androidx.constraintlayout.widget.ConstraintLayout>

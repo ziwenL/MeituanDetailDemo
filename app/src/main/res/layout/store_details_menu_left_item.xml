@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="81dp"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/cb_name"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@drawable/selector_menu_left_bg"
+        android:button="@null"
+        android:gravity="center"
+        android:text="收藏福利"
+        android:textColor="@color/selector_menu_text_color"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_height"
+        android:layout_marginTop="51dp"
+        android:background="#f6f9f9"
+        android:visibility="gone" />
+</FrameLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_full_reduction_tool"
+        android:layout_width="100dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_price_full_reduction_bg"
+        android:gravity="end|center_vertical"
+        android:paddingEnd="10dp"
+        android:text="满减神器"
+        android:textColor="@color/commonTextColor"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/fiz"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_full_reduction_tool"
+        app:layout_constraintStart_toStartOf="@+id/tv_full_reduction_tool"
+        app:layout_constraintTop_toTopOf="@+id/tv_full_reduction_tool" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/shape_price_bg"
+        app:layout_constraintTop_toBottomOf="@+id/tv_full_reduction_tool">
+
+        <TextView
+            android:id="@+id/tv_full_reduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="#ff8000"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="满30减1,满78减4,满138减8" />
+
+        <View
+            android:id="@+id/view_settlement"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shape_settlement_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="82dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_full_reduction" />
+
+        <ImageView
+            android:layout_width="47dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginBottom="3dp"
+            android:src="@mipmap/fh6"
+            app:layout_constraintBottom_toBottomOf="@+id/view_settlement"
+            app:layout_constraintStart_toStartOf="@+id/view_settlement" />
+
+        <TextView
+            android:id="@+id/tv_settlement_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="95dp"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/view_settlement"
+            app:layout_constraintStart_toStartOf="@+id/view_settlement"
+            app:layout_constraintTop_toTopOf="@+id/view_settlement" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:text="¥"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_settlement_price"
+            app:layout_constraintEnd_toStartOf="@+id/tv_settlement_price" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="6dp"
+            android:background="#565938"
+            app:layout_constraintBottom_toBottomOf="@+id/view_settlement"
+            app:layout_constraintStart_toEndOf="@+id/tv_settlement_price"
+            app:layout_constraintTop_toTopOf="@+id/view_settlement" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="免配送费"
+            android:textColor="#565938"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_settlement"
+            app:layout_constraintStart_toEndOf="@+id/tv_settlement_price"
+            app:layout_constraintTop_toTopOf="@+id/view_settlement" />
+
+        <TextView
+            android:id="@+id/tv_lowest_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:textColor="#565938"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_settlement"
+            app:layout_constraintEnd_toEndOf="@+id/view_settlement"
+            app:layout_constraintTop_toTopOf="@+id/view_settlement"
+            android:text="¥20起送" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

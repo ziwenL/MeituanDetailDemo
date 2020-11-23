@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!--顶部 店铺信息+优惠活动 内容-->
+    <com.ziwenl.meituan_detail.ui.shop.ShopDiscountLayout
+        android:id="@+id/layout_discount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--中下部 点菜/评论/商家 内容-->
+    <com.ziwenl.meituan_detail.ui.shop.ShopContentLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/top_min_height"
+        app:layout_behavior=".ui.shop.ShopContentBehavior" />
+
+    <!--顶部 标题栏 内容-->
+    <com.ziwenl.meituan_detail.ui.shop.ShopTitleLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--底部 满减神器、满减优惠、价格费用-->
+    <com.ziwenl.meituan_detail.ui.shop.ShopPriceLayout
+        android:id="@+id/layout_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="edge">10dp</dimen>
+
+    <color name="commonTextColor">#222426</color>
+    <color name="unselectedColor">#848787</color>
+    <color name="tabIndicator">#ffcd2f</color>
+    <color name="transparent">#00000000</color>
+
+    <item name="viewStateStart" type="id" />
+    <item name="viewStateEnd" type="id" />
+    <dimen name="title_height">48dp</dimen>
+    <dimen name="bottom_height">135dp</dimen>
+    <dimen name="status_title_height">30dp</dimen>
+
+
+    <dimen name="top_min_height">302dp</dimen>
+</resources>

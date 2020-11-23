@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/title_height"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginTop="@dimen/status_title_height"
+        android:scaleType="center"
+        android:src="@mipmap/back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:alpha="0"
+        android:background="@drawable/shape_shop_title_search_bg"
+        android:gravity="start|center_vertical"
+        android:paddingStart="35dp"
+        android:text="请输入商品名称"
+        android:textColor="#989898"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+        app:layout_constraintEnd_toStartOf="@+id/iv_collection"
+        app:layout_constraintStart_toEndOf="@+id/iv_back"
+        app:layout_constraintTop_toTopOf="@+id/iv_back" />
+
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="@dimen/title_height"
+        android:layout_height="@dimen/title_height"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/icon_search"
+        app:layout_constraintEnd_toStartOf="@+id/iv_collection"
+        app:layout_constraintTop_toTopOf="@+id/iv_back" />
+
+    <ImageView
+        android:id="@+id/iv_collection"
+        android:layout_width="@dimen/title_height"
+        android:layout_height="@dimen/title_height"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/icon_collection"
+        app:layout_constraintEnd_toStartOf="@+id/iv_menu"
+        app:layout_constraintTop_toTopOf="@+id/iv_back" />
+
+    <ImageView
+        android:id="@+id/iv_menu"
+        android:layout_width="@dimen/title_height"
+        android:layout_height="@dimen/title_height"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/icon_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_back" />
+</androidx.constraintlayout.widget.ConstraintLayout>

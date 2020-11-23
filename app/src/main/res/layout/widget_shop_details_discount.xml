@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_discount"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 初始布局 start -->
+    <TextView
+        android:id="@+id/tv_shop_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="93dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="店铺名字店铺名字店铺名字店铺名字店铺名字店铺名字店铺名字店铺名字"
+        android:textColor="@color/commonTextColor"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_sell"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="月售3767 配送约30分钟"
+        android:textColor="#858687"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_shop_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_shop_name" />
+
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="评分4.6 强烈推荐，xxxxxxx"
+        android:textColor="@color/commonTextColor"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_shop_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sell" />
+
+    <TextView
+        android:id="@+id/tv_honor"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_shop_discount_honor_bg"
+        android:gravity="center"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="天河区炸鸡炸串人气第1名"
+        android:textColor="@color/commonTextColor"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_score" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/fl_coupon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+        app:dividerDrawableHorizontal="@drawable/shape_shop_discount_coupon_horizontal_padding"
+        app:dividerDrawableVertical="@drawable/shape_shop_discount_coupon_vertical_padding"
+        app:flexWrap="wrap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_honor"
+        app:showDividerHorizontal="middle"
+        app:showDividerVertical="middle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:background="@drawable/shape_shop_discount_coupon_bg"
+            android:gravity="center"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="30减2"
+            android:textColor="#fb4e44"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:background="@drawable/shape_shop_discount_coupon_bg"
+            android:gravity="center"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="78减5"
+            android:textColor="#fb4e44"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:background="@drawable/shape_shop_discount_coupon_bg"
+            android:gravity="center"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="5折起"
+            android:textColor="#fb4e44"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:background="@drawable/shape_shop_discount_coupon_bg"
+            android:gravity="center"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="返5元券"
+            android:textColor="#fb4e44"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:background="@drawable/shape_shop_discount_coupon_bg"
+            android:gravity="center"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="首单减15"
+            android:textColor="#fb4e44"
+            android:textSize="11sp" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <TextView
+        android:id="@+id/tv_announcement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:drawableEnd="@mipmap/clh"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingEnd="16dp"
+        android:text="公告：嘻嘻嘻嘻嘻嘻嘻嘻寻寻寻寻寻寻寻寻寻寻寻"
+        android:textColor="#858687"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_shop_name"
+        app:layout_constraintTop_toBottomOf="@+id/fl_coupon" />
+</androidx.constraintlayout.widget.ConstraintLayout>
