@@ -38,7 +38,7 @@
                 android:layout_width="81dp"
                 android:layout_height="wrap_content"
                 android:overScrollMode="never"
-                tools:listitem="@layout/store_details_menu_left_item" />
+                tools:listitem="@layout/item_shop_details_menu_left" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_right"
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:overScrollMode="never"
-                tools:listitem="@layout/store_details_menu_right_item" />
+                tools:listitem="@layout/item_shop_details_menu_right" />
         </LinearLayout>
     </LinearLayout>
 

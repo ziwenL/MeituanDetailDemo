@@ -1,15 +1,13 @@
 package com.ziwenl.meituandemo.ui.store
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import com.ziwenl.meituan_detail.R
 import com.ziwenl.meituan_detail.ui.shop.ScrollableViewProvider
-import kotlinx.android.synthetic.main.store_details_shop_fragment.*
+import kotlinx.android.synthetic.main.fragment_shop_details_shop.*
 
 /**
  * PackageName : com.ziwenl.meituandemo.ui.store
@@ -31,7 +29,7 @@ class ShopFragment : Fragment(), ScrollableViewProvider {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.store_details_shop_fragment, null)
+        return inflater.inflate(R.layout.fragment_shop_details_shop, null)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -4,13 +4,12 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.ziwenl.meituan_detail.R
 import com.ziwenl.meituan_detail.utils.*
-import kotlinx.android.synthetic.main.shop_details_discount.view.*
+import kotlinx.android.synthetic.main.layout_shop_details_discount.view.*
 import kotlinx.android.synthetic.main.widget_shop_details_discount.view.*
 import kotlinx.android.synthetic.main.widget_shop_details_discount_expanded.view.*
 
@@ -50,7 +49,7 @@ class ShopDiscountLayout : ConstraintLayout {
 
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.shop_details_discount, this)
+        LayoutInflater.from(context).inflate(R.layout.layout_shop_details_discount, this)
         sv_main.setOnTouchListener { _, _ -> !mIsExpanded }
 
         tv_announcement.setOnClickListener { switch(!mIsExpanded) }

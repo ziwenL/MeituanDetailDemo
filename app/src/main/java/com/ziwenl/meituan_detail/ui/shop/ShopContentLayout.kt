@@ -4,17 +4,14 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.ScrollView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
 import com.ziwenl.meituan_detail.R
 import com.ziwenl.meituan_detail.ui.shop.adapter.ViewPagerAdapter
 import com.ziwenl.meituandemo.ui.store.EvaluateFragment
 import com.ziwenl.meituandemo.ui.store.ShopFragment
-import kotlinx.android.synthetic.main.shop_details_content.view.*
+import kotlinx.android.synthetic.main.layout_shop_details_content.view.*
 
 /**
  * PackageName : com.ziwenl.meituan_detail.ui.shop
@@ -39,7 +36,7 @@ class ShopContentLayout : ConstraintLayout {
     private var mShopContentBehavior: ShopContentBehavior? = null
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.shop_details_content, this)
+        LayoutInflater.from(context).inflate(R.layout.layout_shop_details_content, this)
     }
 
     override fun onFinishInflate() {

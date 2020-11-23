@@ -6,14 +6,13 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.graphics.drawable.DrawableCompat
 import com.ziwenl.meituan_detail.R
 import com.ziwenl.meituan_detail.utils.*
-import kotlinx.android.synthetic.main.shop_details_title.view.*
+import kotlinx.android.synthetic.main.layout_shop_details_title.view.*
 
 /**
  * PackageName : com.ziwenl.meituan_detail.ui.shop
@@ -44,7 +43,7 @@ class ShopTitleLayout : ConstraintLayout {
     private val drawableMenu = resDrawable(R.mipmap.icon_menu)
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.shop_details_title, this)
+        LayoutInflater.from(context).inflate(R.layout.layout_shop_details_title, this)
     }
 
     private var mStatusBarIsDark = false

@@ -16,8 +16,8 @@ import com.ziwenl.meituandemo.bean.MenuChildBean
 import com.ziwenl.meituandemo.bean.MenuTabBean
 import com.ziwenl.meituandemo.ui.store.adapter.MenuLeftAdapter
 import com.ziwenl.meituandemo.ui.store.adapter.MenuRightAdapter
-import kotlinx.android.synthetic.main.shop_details_menu_fragment.*
-import kotlinx.android.synthetic.main.store_details_menu_right_group_item.view.*
+import kotlinx.android.synthetic.main.fragment_shop_details_menu.*
+import kotlinx.android.synthetic.main.item_shop_details_menu_right_group.view.*
 
 
 /**
@@ -53,7 +53,7 @@ class MenuFragment : Fragment(), ScrollableViewProvider {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.shop_details_menu_fragment, null)
+        return inflater.inflate(R.layout.fragment_shop_details_menu, null)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -100,7 +100,7 @@ class MenuFragment : Fragment(), ScrollableViewProvider {
             FloatDecoration(
                 context!!,
                 rv_right,
-                R.layout.store_details_menu_right_group_item,
+                R.layout.item_shop_details_menu_right_group,
                 object : FloatDecoration.DecorationCallback {
                     override fun getDecorationFlag(position: Int): String {
                         //区分不同条目装饰 View 的 Flag

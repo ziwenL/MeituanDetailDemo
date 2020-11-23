@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ziwenl.meituan_detail.R
 import com.ziwenl.meituandemo.bean.MenuChildBean
-import kotlinx.android.synthetic.main.store_details_menu_right_item.view.*
+import kotlinx.android.synthetic.main.item_shop_details_menu_right.view.*
 
 /**
  * PackageName : com.ziwenl.meituandemo.ui.store.adapter
@@ -20,7 +20,7 @@ class MenuRightAdapter (private val data:MutableList<MenuChildBean>) : RecyclerV
     class ViewHolder(view: View): RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view= LayoutInflater.from(parent.context).inflate(R.layout.store_details_menu_right_item,parent,false)
+        val view= LayoutInflater.from(parent.context).inflate(R.layout.item_shop_details_menu_right,parent,false)
         return ViewHolder(view)
     }
 
