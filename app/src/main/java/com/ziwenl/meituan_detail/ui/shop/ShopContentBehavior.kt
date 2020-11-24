@@ -4,7 +4,7 @@ import android.animation.Animator
 import android.content.Context
 import android.os.Handler
 import android.util.AttributeSet
-import android.util.Log
+import android.view.MotionEvent
 import android.view.View
 import android.widget.Scroller
 import androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -129,38 +129,43 @@ class ShopContentBehavior(private val context: Context, attrs: AttributeSet?) :
         child: ShopContentLayout,
         layoutDirection: Int
     ): Boolean {
-        mShopContentLayoutView = child
-        mShopContentLayoutView.setShopContentBehavior(this)
-        mVpMain = child.findViewById(R.id.vp_main)
-        mVpMain.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
-            override fun onPageScrollStateChanged(state: Int) {
-            }
-
-            override fun onPageScrolled(
-                position: Int,
-                positionOffset: Float,
-                positionOffsetPixels: Int
-            ) {
-            }
-
-            override fun onPageSelected(position: Int) {
-                mShopPriceLayoutView.visibility = if (position == 0) {
-                    View.VISIBLE
-                } else {
-                    View.GONE
+        if (!this::mShopContentLayoutView.isInitialized) {
+            mShopContentLayoutView = child
+            mShopContentLayoutView.setShopContentBehavior(this)
+            mVpMain = child.findViewById(R.id.vp_main)
+            mVpMain.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+                override fun onPageScrollStateChanged(state: Int) {
                 }
+
+                override fun onPageScrolled(
+                    position: Int,
+                    positionOffset: Float,
+                    positionOffsetPixels: Int
+                ) {
+                }
+
+                override fun onPageSelected(position: Int) {
+                    mShopPriceLayoutView.visibility = if (position == 0) {
+                        View.VISIBLE
+                    } else {
+                        View.GONE
+                    }
+                }
+            })
+
+            val priceLayoutParams =
+                mShopPriceLayoutView.layoutParams as CoordinatorLayout.LayoutParams
+            priceLayoutParams.topMargin = parent.height - mShopPriceLayoutView.height
+            mShopPriceLayoutView.layoutParams = priceLayoutParams
+
+            val lp = mShopContentLayoutView.layoutParams as CoordinatorLayout.LayoutParams
+            if (lp.height == CoordinatorLayout.LayoutParams.MATCH_PARENT) {
+                mSimpleTopDistance = lp.topMargin - mShopTitleLayoutView.height
+                lp.height = parent.height - mShopTitleLayoutView.height
+                child.layoutParams = lp
+                return true
             }
-        })
-        val lp = mShopContentLayoutView.layoutParams as CoordinatorLayout.LayoutParams
-        if (lp.height == CoordinatorLayout.LayoutParams.MATCH_PARENT) {
-            mSimpleTopDistance = lp.topMargin - mShopTitleLayoutView.height
-            lp.height = parent.height - mShopTitleLayoutView.height
-            child.layoutParams = lp
-            return true
         }
-        val priceLayoutParams = mShopPriceLayoutView.layoutParams as CoordinatorLayout.LayoutParams
-        priceLayoutParams.topMargin = parent.height - mShopPriceLayoutView.height
-        mShopPriceLayoutView.layoutParams = priceLayoutParams
         return super.onLayoutChild(parent, child, layoutDirection)
     }
 
@@ -331,7 +336,6 @@ class ShopContentBehavior(private val context: Context, attrs: AttributeSet?) :
         target: View,
         type: Int
     ) {
-
         if (type == ViewCompat.TYPE_NON_TOUCH) {
             //惯性滑动结束
             mIsFling = false

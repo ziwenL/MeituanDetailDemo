@@ -85,6 +85,9 @@ class ShopDiscountLayout : ConstraintLayout {
     }
 
 
+    /**
+     * 展开/收缩当前布局
+     */
     fun switch(
         expanded: Boolean,
         byScrollerSlide: Boolean = false
